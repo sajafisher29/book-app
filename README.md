@@ -37,9 +37,9 @@ Actual time needed to complete: 17 minutes
 
 Number and name of feature: Clean UI
 Estimate of time needed to complete: 30 minutes
-Start time: _____
-Finish time: _____
-Actual time needed to complete: _____
+Start time: 12:40PM
+Finish time: 1:08PM
+Actual time needed to complete: 28 minutes and in progress
 
 Number and name of feature: Style website
 Estimate of time needed to complete: 30 minutes
@@ -65,6 +65,7 @@ Changes made to the application as each feature is successfully implemented with
 7/23/2019 10:23AM - Application now has a fully functional quick load index page
 7/23/2019 10:58AM - Application now has a fully functional Google Books API search form
 7/23/2019 12:12PM - Application now has a fully functional browse search results
+7/23/2019 01:09PM - Application now has partially developed UI
 
 ## Contribute
 No contribution guidelines at this point. 
