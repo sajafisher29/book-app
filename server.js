@@ -22,7 +22,7 @@ app.get('/', newSearch);
 app.post('/searches', createSearch);
 
 //Catch-all
-app.get('*', (request, response) => response.status(404).send('This route does not exist.'));
+app.get('*', (request, response) => response.status(404).send('404 Error: This route does not exist.'));
 
 //PORT listener
 app.listen(PORT, () => console.log(`Listening on PORT: ${PORT}`));
@@ -56,7 +56,12 @@ function createSearch(request, response) {
 
   superagent.get(url)
     .then(apiResponse => apiResponse.body.items.map(bookResult => new Book(bookResult.volumeInfo)))
-    .then(results => response.render('pages/searches/show', { searchResults: results }));
+    .then(results => response.render('pages/searches/show', { searchResults: results }))
+    .catch(error => handleError(error));
 }
 
-
+//Handle errors
+function handleError(err, res) {
+  console.error(err);
+  if (res) res.status(500).send('Sorry, something went wrong.')
+}
