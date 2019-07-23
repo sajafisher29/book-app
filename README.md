@@ -25,9 +25,9 @@ Actual time needed to complete: 30 minutes
 
 Number and name of feature: Browse search results
 Estimate of time needed to complete: 30 minutes
-Start time: _____
-Finish time: _____
-Actual time needed to complete: _____
+Start time: 11:10AM
+Finish time: 12:12PM
+Actual time needed to complete: 1:02 hours
 
 Number and name of feature: Error messages
 Estimate of time needed to complete: 30 minutes
@@ -64,6 +64,7 @@ Code style is strict JavaScript. (standard), HTML, CSS, Express, EJS, Superagent
 Changes made to the application as each feature is successfully implemented with timestamps
 7/23/2019 10:23AM - Application now has a fully functional quick load index page
 7/23/2019 10:58AM - Application now has a fully functional Google Books API search form
+7/23/2019 12:12PM - Application now has a fully functional browse search results
 
 ## Contribute
 No contribution guidelines at this point. 
