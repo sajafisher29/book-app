@@ -31,9 +31,9 @@ Actual time needed to complete: 1:02 hours
 
 Number and name of feature: Error messages
 Estimate of time needed to complete: 30 minutes
-Start time: _____
-Finish time: _____
-Actual time needed to complete: _____
+Start time: 12:15PM
+Finish time: 12:32PM
+Actual time needed to complete: 17 minutes
 
 Number and name of feature: Clean UI
 Estimate of time needed to complete: 30 minutes
