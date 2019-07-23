@@ -12,37 +12,37 @@ The entire application will be deployed on Heroku.
 
 ## Build status
 Number and name of feature: Quick loading
-Estimate of time needed to complete: _____
+Estimate of time needed to complete: 30 minutes
 Start time: _____
 Finish time: _____
 Actual time needed to complete: _____
 
 Number and name of feature: Google Books API
-Estimate of time needed to complete: _____
+Estimate of time needed to complete: 30 minutes
 Start time: _____
 Finish time: _____
 Actual time needed to complete: _____
 
 Number and name of feature: Browse search results
-Estimate of time needed to complete: _____
+Estimate of time needed to complete: 30 minutes
 Start time: _____
 Finish time: _____
 Actual time needed to complete: _____
 
 Number and name of feature: Error messages
-Estimate of time needed to complete: _____
+Estimate of time needed to complete: 30 minutes
 Start time: _____
 Finish time: _____
 Actual time needed to complete: _____
 
 Number and name of feature: Clean UI
-Estimate of time needed to complete: _____
+Estimate of time needed to complete: 30 minutes
 Start time: _____
 Finish time: _____
 Actual time needed to complete: _____
 
 Number and name of feature: Style website
-Estimate of time needed to complete: _____
+Estimate of time needed to complete: 30 minutes
 Start time: _____
 Finish time: _____
 Actual time needed to complete: _____
