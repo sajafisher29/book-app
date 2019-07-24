@@ -1,20 +1,21 @@
 'use strict';
 
+//Application dependencies
 const express = require('express');
 const superagent = require('superagent');
-const app = express();
 
+//Application setup
+const app = express();
 const PORT = process.env.PORT || 3000;
 
+//Application middleware
 app.use(express.urlencoded({ extended: true }));
 app.use(express.static('public'));
+
+//Set the view engine for server-side templating
 app.set('view engine', 'ejs');
 
 //API Routes
-
-//Test: http://localhost:3000/...
-// app.get('/', (req, res) => {res.render('pages/index.ejs')});
-
 //Renders the search form
 app.get('/', newSearch);
 
@@ -30,17 +31,18 @@ app.listen(PORT, () => console.log(`Listening on PORT: ${PORT}`));
 //Helper functions
 function Book(info) {
   const placeholderImage = 'https://i.imgur.com/J5LVHEL.jpg';
+  let httpRegex = /^(http:\/\/)/g
 
-  this.title = info.title;
-  this.authors = info.authors;
-  this.image = info.imageLinks.thumbnail;
-  this.description = info.description;
+  this.title = info.title ? info.title : 'No title available.';
+  this.authors = info.authors ? info.authors[0] : 'No author available.';
+  this.isbn = info.industryIdentifiers ? `ISBN_13 ${info.industryIdentifiers[0].identifier}` : 'No ISBN available.';
+  this.image = info.imageLinks ? info.imageLinks.smallThumbnail.replace(httpRegex, 'https://') : placeholderImage;
+  this.description = info.description ? info.description : 'No description available.';
+  this.id = info.industryIdentifiers ? `${info.industryIdentifiers[0].identifier}` : '';
 }
 
 //Note that .ejs file extension is not required
-function newSearch(request, response) {
-  response.render('pages/index')
-}
+function newSearch(request, response) {response.render('pages/index')}
 
 //Note that no API required
 
@@ -57,11 +59,10 @@ function createSearch(request, response) {
   superagent.get(url)
     .then(apiResponse => apiResponse.body.items.map(bookResult => new Book(bookResult.volumeInfo)))
     .then(results => response.render('pages/searches/show', { searchResults: results }))
-    .catch(error => handleError(error));
+    .catch(err => handleError(err, response));
 }
 
 //Handle errors
-function handleError(err, res) {
-  console.error(err);
-  if (res) res.status(500).send('Sorry, something went wrong.')
+function handleError(error, response) {
+  response.render('pages/error', { error: error });
 }
