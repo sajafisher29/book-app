@@ -20,7 +20,7 @@
   "homepage": "https://github.com/sajafisher29/book-app#readme",
   "dependencies": {
     "ejs": "^2.6.2",
-    "express": "^4.17.1",
+    "express": "^4.17.3",
     "superagent": "^5.1.0"
   }
 }
